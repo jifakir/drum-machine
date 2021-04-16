@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import DrumProvider from './context/DrumContext';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DrumProvider>
+     <App />
+    </DrumProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

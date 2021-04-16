@@ -1,0 +1,97 @@
+
+
+.display-container{
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    #display{
+        width: 200px;
+        height: 50px;
+        border: 2px solid #dad1;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #999;
+        text-transform: uppercase;
+    }
+    .volume-slider{
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 100%; 
+        height: 10px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7; 
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+        margin: 5px 0;
+        &:focus{
+            outline: none;
+        }
+    }
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        width: 20px;
+        height: 20px; 
+        border-radius: 50%;
+        background: rgb(218, 207, 207);
+        cursor: pointer;
+        box-shadow: 0 0 5px rgb(200, 160, 223), 0 0 10px rgb(167, 175, 166);
+        &:hover{
+            background: rgb(200, 160, 223);
+        }
+      };
+
+      .volume-slider::-moz-range-thumb {
+        width: 20px; 
+        height: 20px; 
+        border-radius: 50%;
+        background: rgb(218, 207, 207);
+        cursor: pointer;
+        box-shadow: 0 0 5px rgb(200, 160, 223), 0 0 10px rgb(167, 175, 166);
+        &:hover{
+            background: rgb(200, 160, 223);
+        }
+      };
+
+    .bank-changer{
+        p{
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 15px;
+            padding-bottom: 5px;
+            color: #aaa;
+        }
+        .bank-wrapper{
+            background: #999;
+            width: 50px;
+            height: 16px;
+            border-radius: 5px;
+            box-shadow: inset 0 0 3px #dad;
+            transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+            .bank-btn{
+                width: 25px;
+                height: 12px;
+                margin: 2px;
+                border-radius: 3px;
+                background: #ddd;
+                cursor: pointer;
+                &.left{
+                    float: left;
+                    box-shadow: 0 0 5px rgb(126, 150, 126), 0 0 10px rgb(93, 117, 93);
+                }
+                &.right{
+                    float: right;
+                    box-shadow: 0 0 5px rgb(30, 126, 30), 0 0 10px rgb(16, 105, 16), 0 0 15px rgb(58, 201, 58);
+                }
+                
+            }
+        }
+    }
+};
